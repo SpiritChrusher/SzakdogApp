@@ -1,0 +1,18 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+<h2>Two way data binding</h2>
+<input type="text" @bind-value="@name" @bind-value:event="oninput"/>
+<h3>@name</h3>
+
+<input type="number" @bind-value="@id" @bind-value:event="oninput"/>
+<h3>@id</h3>
+
+Welcome here!
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@code {
+    string name = "";
+    int id = 0;
+}
